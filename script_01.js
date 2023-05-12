@@ -14,9 +14,6 @@
 
 // module: addition a + b |  test:
 
-output(add(2,2));
-output(add(2,-2));
-output(add(2,0));
 
 function add(a,b)
 
@@ -28,7 +25,6 @@ function add(a,b)
 
 
 
-
 // module: output | test:
 // output("hello");
 // output(2);
@@ -36,3 +32,41 @@ function output(outputData) {
 	console.log(outputData);
 }
   
+// module: subtraction a - b |  test:
+
+
+// output(subtraction(3,2));
+// output(subtraction(3,-2));
+// output(subtraction(3,0));
+
+function subtraction(a,b) 
+{
+	return a - b;
+	
+}
+
+
+// module: multiplication a * b |  test:
+// output(multiply(3,2));
+// output(multiply(3,-2));
+// output(multiply(3,0));
+
+
+function multiply(a,b)
+{
+	return a * b;	
+}
+
+output(divide(3,2));
+output(divide(3,-2));
+output(divide(3,0));
+
+
+function divide(a,b) 
+{
+	return a / b;	
+}
+
+
+
+
