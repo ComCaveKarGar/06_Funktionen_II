@@ -11,6 +11,9 @@
 4. Ausgabe in Konsole : check!
 */
 
+// Konstanten
+const ERROR_STR_DIV = "Teilen durch 0 nicht möglich!";
+const ERROR_STR_GEN = "Irgendetwas ging schief!"
 
 // module: addition a + b |  test:
 function add(a,b)
@@ -26,7 +29,6 @@ function add(a,b)
 function output(outputData) {
 	console.log(outputData);
 }
-
 // module: subtraction a - b |  test:
 
 // output(subtraction(3,2));
@@ -36,7 +38,6 @@ function output(outputData) {
 function subtraction(a,b) 
 {
 	return a - b;
-	
 }
 // module: multiplication a * b |  test:
 
@@ -50,21 +51,20 @@ function multiply(a,b)
 }
 // module: division a / b |  test:
 
-output(divide(4,2));
-output(divide(3,2));
-output(divide(3,-2));
-output(divide(3,0));
+// output(divide(4,2));
+// output(divide(3,2));
+// output(divide(3,-2));
+// output(divide(3,0));
 
 function divide(a,b) 
 {
-	if (b != 0) {
+	if (b != 0) 
+	{
 		return a / b;
-
-	} else {
-		return "Teilen durch 0 nicht möglich";
-
+	} else 
+	{
+		return ERROR_STR_DIV;
 	}
-
 }
 
 
