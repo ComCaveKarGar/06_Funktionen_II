@@ -6,8 +6,8 @@
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
 1. Dateneingabe + -überprüfung : 
-2. Auswahl Rechenart : 
-3. Fkt. Grundrechenarten : 
+2. Auswahl Rechenart : Check!
+3. Fkt. Grundrechenarten : Check!
 4. Ausgabe in Konsole : check!
 */
 
@@ -15,12 +15,32 @@
 const ERROR_STR_DIV = "Teilen durch 0 nicht möglich!";
 const ERROR_STR_GEN = "Irgendetwas ging schief!"
 
-// module: addition a + b |  test:
-function add(a,b)
+// module: calculator | tests:
+// agreement : "+","-","*",":","/"
 
-{
-	return a + b;
-	
+// output(calculator(3,2,"+"));
+// output(calculator(3,2,"-"));
+// output(calculator(3,2,"*"));
+// output(calculator(3,2,":"));
+// output(calculator(3,2,"/"));
+// output(calculator(3,0,"/"));
+// output(calculator(3,2,"#?!"));
+
+function calculator(a,b,op) {
+		switch (op) {
+			
+			case "+":
+				return add(a,b);
+			case "-":
+				return subtraction(a,b);
+			case "*":
+				return multiply(a,b);
+			case "/":	
+			case ":":	
+				return divide(a,b);
+		default:
+			return ERROR_STR_GEN;
+		}
 }
 
 // module: output | test:
@@ -28,6 +48,13 @@ function add(a,b)
 // output(2);
 function output(outputData) {
 	console.log(outputData);
+}
+// module: addition a + b |  test:
+function add(a,b)
+
+{
+	return a + b;
+	
 }
 // module: subtraction a - b |  test:
 
